@@ -29,12 +29,12 @@ public class LoanCalc {
 
     public static double bruteForceSolver(double loan, double rate, int n, double epsilon) {
         iterationCounter = 0;
-        double g = loan / n;
+        double g1 = loan / n;
         while ((endBalance(loan, rate, n, g))> epsilon) {
-            g += epsilon;
+            g1+= epsilon;
             iterationCounter++;
         }
-        return g;
+        return g1;
     }
 
     public static double bisectionSolver(double loan, double rate, int n, double epsilon) {  
