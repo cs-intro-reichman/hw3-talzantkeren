@@ -30,7 +30,7 @@ public class LoanCalc {
     public static double bruteForceSolver(double loan, double rate, int n, double epsilon) {
         iterationCounter = 0;
         double g = loan / n;
-        while (Math.abs(endBalance(loan, rate, n, g)) > epsilon) {
+        while ((endBalance(loan, rate, n, g))> epsilon) {
             g += epsilon;
             iterationCounter++;
         }
